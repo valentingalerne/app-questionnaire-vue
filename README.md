@@ -27,3 +27,10 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+###Mercredi 23 octobre
+- Création du dépôt pour le projet app questionnaire
+- Création du dépôt pour le contenu du répertoire dist
+
+#Objectif séance
+- Ajout de 3 input pour la page de bienvenue
