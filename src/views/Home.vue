@@ -45,14 +45,24 @@ export default {
   },
   methods: {
     addDB: function () {
+      // var tempThis = this
+      var now = Date.now().toString()
       var userValues = {
-        _id: new Date(),
+        _id: (this.prenom.substring(0, 1) + this.nom + now).toLowerCase(),
         nom: this.nom,
         prenom: this.prenom,
         societe: this.societe
       }
       db.put(userValues).then(function (doc) {
+        // tempThis.$router.push({ path: 'questionnaire', query: { userId: tempThis.id } })
         console.log(doc)
+      })
+
+      db.get(userValues._id).then(function (doc) {
+        console.log(userValues._id)
+        console.log(doc)
+      }).catch(function (err) {
+        console.log(err)
       })
       db.replicate.to(url)
     }
