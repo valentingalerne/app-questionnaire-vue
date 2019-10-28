@@ -37,3 +37,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - Test d'ajout d'icon (fontawsome)
 - Installation de CouchDB, et test d'un projet de test (todo)
 
+###Mercredi 28 octobre
+#Objectif séance
+- Ajout d'un template Bootstrap pour la page de login
+- Login avec CouchDB
