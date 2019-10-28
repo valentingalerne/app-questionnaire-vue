@@ -1,0 +1,11 @@
+.containerLogin{
+  background-color: #f5f5f7;
+  max-width: 400px;
+  min-height: 250px;
+  margin-top: 5%;
+  /* padding-top: 100px; */
+}
+
+.col-sm{
+  margin-top: 4px;
+}
