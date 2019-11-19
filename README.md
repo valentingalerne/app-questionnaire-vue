@@ -13,3 +13,7 @@
 - Register avec CouchDB, (sauvegarde du nom, prenom, societe)
 - Passage de la page /home à la page /questionnaire
 - Recuperation du "_rev" pour pouvoir ajouter les reponses
+
+###Mardi 19 novembre
+#Objectif séance
+- Commenter le code
