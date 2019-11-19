@@ -9,3 +9,11 @@
 .col-sm{
   margin-top: 4px;
 }
+
+.Question{
+  background-color: #f9f9f9;
+  max-width: 800px;
+  min-height: 150px;
+  margin: auto;
+  margin-top: 5%;
+}

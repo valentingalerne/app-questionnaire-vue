@@ -1,16 +1,29 @@
-<!-- <template>
-  <h1>{{question}}</h1>
+<template>
+  <div>
+    <p>{{data.question}}</p>
+    <div class="alignReponses">
+      <input type="radio" name="reponse" value="data.reponse[0].value">{{data.reponse[0].value}}<br>
+      <input type="radio" name="reponse" value="data.reponse[1].value">{{data.reponse[1].value}}<br>
+      <input type="radio" name="reponse" value="data.reponse[2].value">{{data.reponse[2].value}}<br>
+    </div>
+  </div>
 </template>
-
-<script>
-export default {
-  name: 'question',
-  props: {
-    question: String
-  }
-}
-</script>
 
 <style lang="scss">
 @import '../assets/css/main.css';
-</style> -->
+</style>
+
+<script>
+import json from '../questions.json'
+export default {
+  name: 'data',
+  props: {
+    data: Object
+  },
+  data () {
+    return {
+      myJson: json
+    }
+  }
+}
+</script>

@@ -1,10 +1,58 @@
 {
-  "question": "Possédez-vous un BTS SIO ?",
-  "reponse": "oui",
-  "reponse": "non"
-},
-{
-  "question": "Quel age avez-vous ?",
-  "reponse": "oui",
-  "reponse": "non"
+  "questions": [
+    {
+      "numQuestion": "1",
+      "question": "Pourquoi les chaussures de sécurité sont-elles obligatoires ?",
+      "reponse": [
+        {
+          "numeroReponse": "1",
+          "value": "L'écrasement des orteils"
+        },
+        {
+          "numeroReponse": "2",
+          "value": "La pluie"
+        },
+        {
+          "numeroReponse": "3",
+          "value": "La perforation plantaire"
+        }
+      ]
+    },
+    {
+      "numQuestion": "2",
+      "question": "Quelle est la bonne conduite à tenir en cas d'accident ?",
+      "reponse": [
+        {
+          "numeroReponse": "1",
+          "value": "Alerter les secours - Protéger la victime - Rassurer la victime"
+        },
+        {
+          "numeroReponse": "2",
+          "value": "Protéger la victime –Se protéger- Alerter les secours - Rassurer la victime"
+        },
+        {
+          "numeroReponse": "3",
+          "value": "Rassurer la victime - Alerter les secours - Protéger la victime"
+        }
+      ]
+    },
+    {
+      "numQuestion": "2",
+      "question": "Que faire lorsque l'on intervient sur un circuit électrique ?",
+      "reponse": [
+        {
+          "numeroReponse": "1",
+          "value": "Rien de particulier"
+        },
+        {
+          "numeroReponse": "2",
+          "value": "Couper le courant du circuit en question"
+        },
+        {
+          "numeroReponse": "3",
+          "value": "Eteindre la lumière"
+        }
+      ]
+    }
+  ]
 }

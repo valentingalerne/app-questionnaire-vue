@@ -17,6 +17,7 @@
           </div>
         </div>
         <router-link to="/questionnaire" ><button @click="addDB()">S'enregistrer</button></router-link>
+        <!-- <button @click="addDB()">S'enregistrer</button> -->
     </div>
   </div>
 </template>
@@ -29,8 +30,8 @@
 // @ is an alias to /src
 // import Login from '@/components/Login.vue'
 import PouchDB from 'pouchdb'
-var db = new PouchDB('test') // Création de la connection à la BDD : 28/10/2019
-var url = 'http://localhost:5984/test' // Initialisation de l'url de ma base de données : 28/10/2019
+var db = new PouchDB('login') // Création de la connection à la BDD : 28/10/2019
+var url = 'http://localhost:5984/projet_questionnaire' // Initialisation de l'url de ma base de données : 28/10/2019
 
 export default {
   data () {
@@ -53,18 +54,19 @@ export default {
         prenom: this.prenom,
         societe: this.societe
       }
-      db.put(userValues).then(function (doc) {
+      db.put(userValues).then((doc, err) => {
         // tempThis.$router.push({ path: 'questionnaire', query: { userId: tempThis.id } })
         console.log(doc)
       })
 
-      db.get(userValues._id).then(function (doc) {
+      db.get(userValues._id).then((doc, err) => {
         console.log(userValues._id)
         console.log(doc)
       }).catch(function (err) {
         console.log(err)
       })
       db.replicate.to(url)
+      localStorage.idUser = userValues._id
     }
   }
 }
