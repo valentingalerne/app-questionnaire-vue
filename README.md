@@ -17,3 +17,4 @@
 ###Mardi 19 novembre
 #Objectif séance
 - Commenter le code
+- Afficher les questions + reponses
