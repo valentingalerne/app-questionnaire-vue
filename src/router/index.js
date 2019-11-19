@@ -1,27 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
+// Construction des différentes routes
 const routes = [
   {
+  // Route vers la page home
     path: '/',
     name: 'home',
-    component: Home
+    component: () => import('../views/Home.vue')
   },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
+  // Route vers la page questionnaire
   {
     path: '/questionnaire',
     name: 'questionnaire',
-    component: () => import(/* webpackChunkName: "questionnaire" */ '../views/Questionnaire.vue')
+    component: () => import('../views/Questionnaire.vue')
   }
 ]
 

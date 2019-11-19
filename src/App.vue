@@ -2,16 +2,9 @@
   <div id="app">
   <div id="nav">
   <router-link to="/">Home</router-link>
-  <!-- <router-link to="/about">About</router-link> -->
-</div>
-<router-view/>
-<!-- <form id="main" v-cloak>
-    <h2>Bienvenue sur l’app questionnaire </h2>
-    <i class="fas fa-user-circle"></i><input type="text" placeholder=  "Prénom" /><br/>
-    <i class="fas fa-user-circle"></i><input type="text" placeholder="Nom" /><br/>
-    <input type="text" placeholder="Société" /><br/>
-</form> -->
-</div>
+  </div>
+  <router-view/>
+  </div>
 </template>
 
 <style lang="scss">

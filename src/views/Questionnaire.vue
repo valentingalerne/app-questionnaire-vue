@@ -3,10 +3,12 @@
     <h1>Questionnaire</h1>
     <template>
         <div>
+            <!-- For permettant de boucler sur toutes les questions stockees dans le json -->
             <div class="Question shadow" v-for="data in myJson.questions" :key="data.numQuestion">
                 <Question :data="data"></Question>
             </div><br/>
-            <button class="btn btn-outline-secondary" @click="addDB()">Envoyer le formulaire</button>
+            <!-- Bouton pour envoyer les reponses du questionnaire, PAS FONCTIONNEL -->
+            <button class="btn btn-outline-secondary" @click="addDB()">Envoyer le questionnaire</button>
         </div>
     </template>
   </div>
@@ -16,7 +18,7 @@ import Question from '../components/Question.vue'
 import json from '../questions.json'
 import PouchDB from 'pouchdb'
 var db = new PouchDB('questions')
-var url = 'http://localhost:5984/test'
+var url = 'http://localhost:5984/projet_questionnaire'
 
 export default {
   data () {
@@ -31,12 +33,14 @@ export default {
   components: {
     Question
   },
+  // Récupération de l'id de l'utilisateur passé en localStorage
   mounted () {
     if (localStorage.idUser) {
       this.id = localStorage.idUser
     }
   },
   methods: {
+    // Fonction devant ajouter les réponses sélectionnées par l'utilisateur en BDD, NON FONCTIONNEL
     addDB: function () {
       var reponseValues = {
         id: this.id,
@@ -45,13 +49,11 @@ export default {
         reponseQuestion: null
       }
       db.put(reponseValues).then((doc, err) => {
-        console.log(doc)
+        // console.log(doc)
       })
       db.get(reponseValues.nom).then((doc, err) => {
-        console.log(reponseValues.nom)
-        console.log(doc)
-      }).catch(function (err) {
-        console.log(err)
+        // console.log(reponseValues.nom)
+        // console.log(doc)
       })
       db.replicate.to(url)
     }
