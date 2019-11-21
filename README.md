@@ -21,3 +21,7 @@
 
 ###Lien vers l'application
 https://valentingalerne.github.io/
+
+###Pour utiliser l'application
+- Assurer vous d'avoir couch db d'installé
+- Puis créez une nouvelle database nommée projet_questionnaire
